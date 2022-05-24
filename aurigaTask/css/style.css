@@ -1,0 +1,193 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    position: fixed;
+}
+
+nav .container-fluid{
+    padding: 10px 40px;
+}
+
+.section-margin{
+    margin-top: 60px;
+}
+
+navbar{
+    padding: 20px 30px;
+}
+
+.navbar-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    max-width: 50px;
+}
+
+.hamburger-menu a{
+    color: #FFF;
+}
+
+.background-video{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background-video:before{
+    content: '';
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 8px);
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    position: relative;   
+}
+
+.main-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+}
+
+.main-content h1{
+    font-size: 105px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.main-content p{
+    font-size: 26px;
+}
+
+.btn-view-portfolio{
+    background-color: transparent;
+    border: 1px solid #FFF;
+    padding: 15px 30px;
+    text-align: center;
+    color: #FFF;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.down-angle{
+    position: absolute;
+    bottom: 0;
+}
+
+.btn-touch{
+    color: rgba(0,0,0,0.8);
+    border: 1px solid rgba(0,0,0,0.8);
+}
+
+.section-one-content-left{
+    padding: 0 50px;
+}
+
+.section-one-content-left h1{
+    font-size: 65px;
+}
+
+.section-one-content-left p{
+    color: grey;
+    margin-top: 35px;
+}
+
+.btn-touch{
+    background-color: transparent;
+    border: 1px solid grey;
+    font-size: 14px;
+    padding: 15px 30px;
+    text-align: center;
+    color: grey;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.section-one-content-right:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.section-one-content-right:after{
+    content: 'Creative';
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    font-size: 64px;
+    transform: rotate(270deg);
+    color: rgba(0,0,0,0.6);
+    font-weight: 700;
+    background-color: rgba(255,255,255,0.4);
+    padding: 10px;
+}
+
+.img-diagram{
+    
+    z-index: 11;
+    width: 500px;
+    height: 100%;
+}
+
+.rct1{
+    background-color: aqua;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    width: 180px;
+    height: 90px;
+}
+
+.rct1:before{
+    content: '';
+    position: absolute;
+    background-color: aqua;
+    width: 105px;
+    height: 59px;
+    bottom: -70%;
+    left: -55%;
+}
+
+.rct2{
+    position: absolute;
+    right: ;
+    background-color: #FFF;
+    width: 100px;
+    height: 100px;
+    right: 0;
+    bottom: 0;
+}
+
+.rct2:before{
+    content: '';
+    position: absolute;
+    background-color: #FFF;
+    width: 100px;
+    height: 100px;
+    left: -100%;
+    bottom: 100%;
+}
