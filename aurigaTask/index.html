@@ -81,18 +81,125 @@
     <!--section one ends-->
 
     <!--section two starts-->
-    <div class="section-two">
+    <div class="section-two section-margin">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
+                    <div class="grid">
+                        <div class="grid-sizer"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                        <div class="grid-item grid-item--height3"></div>
+                        <div class="grid-item grid-item--height2"></div>
+                        <div class="grid-item grid-item--width3"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item grid-item--height2"></div>
+                        <div class="grid-item grid-item--width2 grid-item--height3"></div>
+                        
+                      </div>
                 </div>
             </div>
         </div>
     </div>
     <!--section two end-->
 
+    <!--section three starts-->
+    <div class="section-three section-margin sec4bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="sec4-heading">
+                        <h1>Select your plans</h1>
+                        <p>Creating a website has never been this easy with Ranosys</p>
+                    </div>
+                    <div class="sec-4_ranosysPlans">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul class="ranosys_plans_list">
+                                    <li>
+                                        <div class="ranosys_plan_listImg">
+                                            <img src="images/earth.png" class="img-fluid" alt="personal project">
+                                        </div>
+                                    </li>
+                                    <li class="ranosys_plans_name"><h2>Personal Project</h2></li>                       
+                                    <li>Logo Design</li>             
+                                    <li>Brochure template</li>
+                                    <li>Web Design</li>
+                                    <li>Wordpress development</li>
+                                    <li>behance presentation</li>
+                                    <li>Dribble Shorts</li>
+                                    <li>Z revisions</li>
+                                    <li>Support via Enroll</li>
+                                    <li>
+                                        <div class="service_list_price">
+                                            From $999
+                                        </div> 
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="ranosys_plans_list">
+                                                                   
+                                <li>
+                                    <div class="ranosys_plan_listImg">
+                                        <img src="images/space.png" class="img-fluid" alt="business project">
+                                    </div>
+                                </li>
+                                <li class="ranosys_plans_name"><h2>Personal Project</h2></li>                       
+                                    <li>Logo Design</li>             
+                                    <li>Brochure template</li>
+                                    <li>Web Design</li>
+                                    <li>Wordpress development</li>
+                                    <li>behance presentation</li>
+                                    <li>Dribble Shorts</li>
+                                    <li>Z revisions</li>
+                                    <li>Support via Enroll</li>
+                                    <li class="service_list_price">From $999</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="ranosys_plans_list">
+                                    <li>
+                                        <div class="ranosys_plan_listImg">
+                                            <img src="images/robot.png" class="img-fluid" alt="exclusive project">
+                                        </div>
+                                    </li>
+                                    <li class="ranosys_plans_name"><h2>Personal Project</h2></li>                       
+                                    <li>Logo Design</li>             
+                                    <li>Brochure template</li>
+                                    <li>Web Design</li>
+                                    <li>Wordpress development</li>
+                                    <li>behance presentation</li>
+                                    <li>Dribble Shorts</li>
+                                    <li>Z revisions</li>
+                                    <li>Support via Enroll</li>
+                                    <li class="service_list_price">From $999</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+    <!--section three ends-->
+
     <script src="./bootstrap-4.6.1/js/bootstrap.min.js"></script>  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/masonry.js"></script>
+
 	<script src="index.js"></script>
+    <script>
+
+        $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+        });
+
+    </script>
   </body>
 </html>
