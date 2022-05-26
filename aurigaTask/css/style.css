@@ -18,6 +18,10 @@ nav .container-fluid{
     margin-top: 60px;
 }
 
+.section-margin2{
+    margin-top: 120px;
+}
+
 .section-padding{
     padding: 60px 0;
 }
@@ -26,9 +30,24 @@ navbar{
     padding: 20px 30px;
 }
 
+.fixed-header{
+    background-color: #fff;
+    transition: 0.2s all;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+}
+
 .navbar-div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.close-menu{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 30px;
+    color: grey;
 }
 
 .logo img{
@@ -37,6 +56,41 @@ navbar{
 
 .hamburger-menu a{
     color: #FFF;
+}
+
+.navbar-menu-items{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+    width: 100%;
+    background-color: rgba(17, 43, 60,0.9);
+    transition: 0.3s all;
+}
+
+.t-flex{
+    display: flex;    
+    transition: 0.3s all;
+}
+
+.navbar-menu-items ul{
+    padding-left: 0;
+}
+
+
+
+.navbar-menu-items-list{
+    list-style-type: none;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.navbar-menu-links{
+    font-size: 30px;
+    color: grey;
 }
 
 .background-video{
@@ -95,6 +149,12 @@ main{
     color: #FFF;
     border-radius: 30px;
     text-transform: uppercase;
+    -webkit-transition: 0.3s all;
+}
+
+.btn-view-portfolio:hover{
+    background-color: #fff;
+    color: #000;
 }
 
 .down-angle{
@@ -200,9 +260,26 @@ main{
     bottom: 100%;
 }
 
-.grid {
-  }
-  
+/** section2 css*/
+
+.category-list{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.category-list li{
+    float: left;
+    list-style-type: none;
+}
+
+.category-list li:not(:first-child){
+    padding-left: 20px;
+}
+
   /* clearfix */
   .grid:after {
     content: '';
@@ -220,18 +297,33 @@ main{
   .grid-item {
     height: 120px;
     float: left;
-    background: #D26;
-    border: 2px solid #333;
-    border-color: hsla(0, 0%, 0%, 0.5);
+    
+    border: 2px solid #FFF;
     border-radius: 5px;
   }
   
-  .grid-item--width2 { width:  40%; }
-  .grid-item--width3 { width:  60%; }
-  
+  .grid-item--width2 { width:  48%; }
+  .grid-item--width3 { width:  52%; border-right: 10px solid #FFF;}
+  .grid-item--width1 { width: 20%;}
+  .grid-item--width5 { width: 60%;}
+  .grid-width3-bg  { background-image: url('../images/grid-width3img.jpg');}
+  .grid-bg{
+    background-size: cover;
+    background-position: center;
+    margin-top: 3px;
+    border-right: 11px solid #FFF;
+    border-bottom: 3px solid #FFF;
+}
+  .grid-width2-bg{background-image: url('../images/gridwidth2Img.jpg');}
+  .grid-width1-bg{background-image: url('../images/grid1Img.jpg');}
+  .grid-width4-bg{background-image: url('../images/grid4Img.jpg');}
+  .grid-width5-bg{background-image: url('../images/grid5Img.jpg');}
+  .grid-width6-bg{background-image: url('../images/grid6Img.jpg');}
+  .grid-width7-bg{background-image: url('../images/grid7Img.jpg');}
+  .grid-item--height1 { height: 300px;}
   .grid-item--height2 { height: 200px; }
-  .grid-item--height3 { height: 260px; }
-  .grid-item--height4 { height: 360px; }
+  .grid-item--height3 { height: 300px; }
+  .grid-item--height4 { height: 600px; }
   
 
   /**section3 css*/
