@@ -15,7 +15,7 @@ nav .container-fluid{
 }
 
 .section-margin{
-    margin-top: 60px;
+    margin-top: 75px;
 }
 
 .section-margin2{
@@ -24,6 +24,11 @@ nav .container-fluid{
 
 .section-padding{
     padding: 60px 0;
+}
+
+.active_filter{
+    background-color: rgba(17, 43, 60,1);
+    color: #FFF;
 }
 
 navbar{
@@ -51,7 +56,7 @@ navbar{
 }
 
 .logo img{
-    max-width: 50px;
+    max-width: 100px;
 }
 
 .hamburger-menu a{
@@ -160,6 +165,8 @@ main{
 .down-angle{
     position: absolute;
     bottom: 0;
+    cursor: pointer;
+    padding: 5px;
 }
 
 .btn-touch{
@@ -272,13 +279,14 @@ main{
 }
 
 .category-list li{
+    cursor: pointer;
     float: left;
     list-style-type: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
-.category-list li:not(:first-child){
-    padding-left: 20px;
-}
 
   /* clearfix */
   .grid:after {

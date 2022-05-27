@@ -57,7 +57,7 @@
 
     <!--section one starts-->
 
-    <div class="section section-one section-margin">
+    <div class="section-one section-margin">
       <div class="container-fluid">
         <div class="section-one-content">
           <div class="row">
@@ -100,30 +100,30 @@
             <div class="filter-tabs">
               
               <ul class="category-list">
-                <li>All</li>
-                <li>Web Design</li>
-                <li>Interaction</li>
-                <li>Application</li>
-                <li>Branding</li>
-                <li>Graphic Design</li>
-                <li>Photography</li>
+                <li class="category-list-item" id="All">All</li>
+                <li class="category-list-item"  id="WebDesign">WebDesign</li>
+                <li class="category-list-item"  id="Interaction">Interaction</li>
+                <li class="category-list-item"  id="Application">Application</li>
+                <li class="category-list-item"  id="Branding">Branding</li>
+                <li class="category-list-item"  id="GraphicDesign">GraphicDesign</li>
+                <li class="category-list-item"  id="Photography">Photography</li>
               </ul>
             
-            <div class="grid">
-              <div class="grid-item grid-item--width3 grid-item--height4 grid-bg grid-width3-bg"></div>
-              <div class="grid-item grid-item--width2 grid-item--height3 grid-bg grid-width2-bg"></div>
-              <div class="grid-item grid-item--width2 grid-item--height3 grid-bg grid-width1-bg"></div>
-              <div class="grid-item grid-item--width1 grid-item--height4 grid-bg grid-width4-bg "></div>
-              <div class="grid-item grid-item--width5 grid-item--height4 grid-bg grid-width5-bg "></div>
-              <div class="grid-item grid-item--width1 grid-item--height1 grid-bg grid-width6-bg "></div>
-              <div class="grid-item grid-item--width1 grid-item--height1 grid-bg grid-width7-bg "></div>
-              <div class="grid-item grid-item--width3 grid-item--height4 grid-bg grid-width3-bg"></div>
-              <div class="grid-item grid-item--width2 grid-item--height3 grid-bg grid-width2-bg"></div>
-              <div class="grid-item grid-item--width2 grid-item--height3 grid-bg grid-width1-bg"></div>
-              <div class="grid-item grid-item--width1 grid-item--height4 grid-bg grid-width4-bg "></div>
-              <div class="grid-item grid-item--width5 grid-item--height4 grid-bg grid-width5-bg "></div>
-              <div class="grid-item grid-item--width1 grid-item--height1 grid-bg grid-width6-bg "></div>
-              <div class="grid-item grid-item--width1 grid-item--height1 grid-bg grid-width7-bg "></div>
+            <div class="grid" id="filterItems">
+              <div class="grid-item grid-item--width3 grid-item--height4 grid-bg grid-width3-bg WebDesign"></div>
+              <div class="grid-item grid-item--width2 grid-item--height3 grid-bg grid-width2-bg Interaction"></div>
+              <div class="grid-item grid-item--width2 grid-item--height3 grid-bg grid-width1-bg Application"></div>
+              <div class="grid-item grid-item--width1 grid-item--height4 grid-bg grid-width4-bg GraphicDesign"></div>
+              <div class="grid-item grid-item--width5 grid-item--height4 grid-bg grid-width5-bg Branding"></div>
+              <div class="grid-item grid-item--width1 grid-item--height1 grid-bg grid-width6-bg Photography"></div>
+              <div class="grid-item grid-item--width1 grid-item--height1 grid-bg grid-width7-bg Application"></div>
+              <div class="grid-item grid-item--width3 grid-item--height4 grid-bg grid-width3-bg WebDesign Branding Photography"></div>
+              <div class="grid-item grid-item--width2 grid-item--height3 grid-bg grid-width2-bg WebDesign Photography"></div>
+              <div class="grid-item grid-item--width2 grid-item--height3 grid-bg grid-width1-bg WebDesign Branding Interaction"></div>
+              <div class="grid-item grid-item--width1 grid-item--height4 grid-bg grid-width4-bg Photography Application"></div>
+              <div class="grid-item grid-item--width5 grid-item--height4 grid-bg grid-width5-bg GraphicDesign Interaction"></div>
+              <div class="grid-item grid-item--width1 grid-item--height1 grid-bg grid-width6-bg GraphicDesign"></div>
+              <div class="grid-item grid-item--width1 grid-item--height1 grid-bg grid-width7-bg Interaction Branding"></div>
             </div>
           </div>
         </div>
@@ -326,7 +326,7 @@
       <div class="container-fluid">
         <div class="footer-section">
           <div class="footer-section-left">
-              <img src="images/ranosys-footer-logo.png" class="img-fluid" alt="footer-logo">
+              <img src="images/footer-logo.png" class="img-fluid" alt="footer-logo">
               <p>copywright @2020 at ranosys Prive Ltd. All Rights Reserved</p>
               <ul class="footer-list">
                 <li class="footer-list-item"> <a href="#" class="footer-list-link">Twitter</a> </li>
@@ -379,8 +379,48 @@
           $('.navbar-menu-items').removeClass('t-flex');
         })
       
+      //filter tabs
+
+      var $btns = $('.category-list-item').click(function() {
+        if (this.id == 'All') {
+          $('#filterItems > div').fadeIn(450);
+        }       
+        else {
+          var $el = $('.' + this.id).fadeIn(450);
+          $('#filterItems > div').not($el).hide();
+        }
+        $btns.removeClass('active_filter');
+        $(this).addClass('active_filter');
+      }) 
+
+      //Scroll to the section
+
+      $(".scroll-next").click(function() {
+        $('html,body').animate({
+          scrollTop: $(".section-one").offset().top},
+          'slow');
+      });
 
     </script>
+
+    <!-- <script>
+
+      const filterMenu = document.querySelectorAll('.category-list-item');
+      const serviceClass = document.querySelectorAll('.grid-item');
+      
+      for(var i = 0; i < filterMenu.length ; i++){
+        
+        const menuItems = filterMenu[i].innerHTML;
+          menuItems.addEventListener('click',function(){
+            console.log(serviceClass.currentTarget.contains)
+            
+        })
+
+      
+      }
+
+
+    </script> -->
 
     <script>
       $(".scroll-next").click(function() {
