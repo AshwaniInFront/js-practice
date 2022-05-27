@@ -170,8 +170,14 @@ main{
 }
 
 .btn-touch{
+    position: relative;
     color: rgba(0,0,0,0.8);
     border: 1px solid rgba(0,0,0,0.8);
+    transition: 0.3s all;
+}
+
+.btn-touch:hover{
+
 }
 
 .section-one-content-left{
@@ -354,21 +360,21 @@ main{
     background-color:rgba(17, 43, 60,0.55)
 }
 
-    .ranosys_plans_list li{
+    .auriga_plans_list li{
     color: #FFF;
     list-style: none;
     text-align: center;
 }
 
-    .ranosys_plans_list li:not(:first-child){
+    .auriga_plans_list li:not(:first-child){
     margin-top: 5px;
 }
 
-    .ranosys_plans_list li:last-child{
+    .auriga_plans_list li:last-child{
     margin-top: 35px;
 }
 
-    .ranosys_plan_listImg{
+    .auriga_plan_listImg{
     background-color: #FFF;
     text-align: center;
     width: 100px;
@@ -381,11 +387,11 @@ main{
 
 }
 
-    .ranosys_plans_list li img{
+    .auriga_plans_list li img{
     max-width: 50px;
 }
 
-    .ranosys_plans_name h2{
+    .auriga_plans_name h2{
     font-size: 22px;
     margin-top: 20px;
 }
@@ -405,11 +411,11 @@ main{
     margin-top: 15px;
 }
 
-    .ranosys_plans_list{
+    .auriga_plans_list{
      margin-top: 75px;   
 }
 
-    .ranosys_plans_list li .service_list_price{
+    .auriga_plans_list li .service_list_price{
     display: inline-block;
     max-width: 200px;
     border-radius: 36px;
@@ -422,7 +428,7 @@ main{
     -o-transition: 0.2s all;
 }
 
-    .ranosys_plans_list li .service_list_price:hover{
+    .auriga_plans_list li .service_list_price:hover{
         background-color: #fff;
         color: #000;
         transform: scale(1.09);
