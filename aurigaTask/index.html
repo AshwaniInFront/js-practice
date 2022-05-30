@@ -354,8 +354,8 @@
     <script src="index.js"></script>
     <script>
 
-      //navbar onscroll fixed
 
+      //navbar onscroll fixed
       $(window).scroll(function(){
         if ($(window).scrollTop() >= 200) {
           $('navbar').addClass('fixed-header');
@@ -367,9 +367,7 @@
         }
       });
 
-      //navbar menu open
-            
-        //navbar menu open
+      //navbar menu open           
         $('.h-menu').click(function(e){
           e.preventDefault();
           $('.navbar-menu-items').addClass('t-flex');
@@ -380,7 +378,6 @@
         })
       
       //filter tabs
-
       var $btns = $('.category-list-item').click(function() {
         if (this.id == 'All') {
           $('#filterItems > div').fadeIn(450);
@@ -394,7 +391,6 @@
       }) 
 
       //Scroll to the section
-
       $(".scroll-next").click(function() {
         $('html,body').animate({
           scrollTop: $(".section-one").offset().top},
@@ -414,20 +410,9 @@
           menuItems.addEventListener('click',function(){
             console.log(serviceClass.currentTarget.contains)
             
-        })
-
-      
+        })     
       }
-
-
     </script> -->
-
-    <script>
-      $(".scroll-next").click(function() {
-		    var cls = $(this).closest(".section").next().offset().top;
-		    $("html, body").animate({scrollTop: cls}, "slow");
-	    });
-    </script>
 
   </body>
 </html>

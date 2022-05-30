@@ -87,15 +87,26 @@ window.addEventListener('DOMContentLoaded',function(){
   filterBtns.forEach(function(btn){
     btn.addEventListener('click',function(e){
         const category = e.currentTarget.dataset.id;
-        const menuCategory = menu.filter(function(){
-          
-        })
-    })
+
+          const menuCategory = menu.filter(function(menuItem){    
+            if(menuItem.category === category){
+              return menuItem
+            }
+          })
+
+          if(menuCategory.category === 'all'){
+            return displayMenuItems(menu);
+          }
+
+          else{
+            return displayMenuItems(menuCategory)
+          }
+         
+      })
   })
 
 function displayMenuItems(menuItems){
   let displayMenu = menuItems.map(function (item) {
-    // console.log(item);
   
     return `<article class="menu-item">
           <img src=${item.img} alt=${item.title} class="photo" />
@@ -109,7 +120,7 @@ function displayMenuItems(menuItems){
             </p>
           </div>
         </article>`;
-  });
+    });
   displayMenu = displayMenu.join("");
   // console.log(displayMenu);
   
