@@ -44,6 +44,8 @@ const weekday = weekdays[futureDate.getDay()];
 const date = futureDate.getDate();
 giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`;
 
+
+//countdown timer code
 const futureTime = futureDate.getTime();
 function getRemaindingTime() {
   const today = new Date().getTime();
@@ -58,6 +60,7 @@ function getRemaindingTime() {
   const oneHour = 60 * 60 * 1000;
   const oneMinute = 60 * 1000;
   // calculate all values
+  
   let days = t / oneDay;
   days = Math.floor(days);
   let hours = Math.floor((t % oneDay) / oneHour);

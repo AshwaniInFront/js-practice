@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>run clock</title>
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .time{
+            width: 80px;
+            height: 100px;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            border-radius: 2px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 6px;
+        }
+
+        .time:not(:last-child){
+            border-right: 0;
+        }
+
+        .time:not(:first-child){
+            border-left: 0;
+        }
+
+        .time{font-size: 40px;}
+
+    </style>
+  </head>
+  <body>
+      
+    <main>
+        <div style="display: flex;">
+            <div class="time seconds">
+                00
+            </div>
+            <div class="time"><h4>:</h4></div>
+
+            <div class="time minutes">
+                00
+            </div>
+        </div>
+        <br>
+        <div class="toggle-watch" style="max-width: 400px;margin: auto;">
+            <button class="btn-toggle btn-start">start</button>
+            <button class="btn-toggle btn-stop">stop</button>
+            <button class="btn-toggle btn-reset">reset</button>
+        </div>
+
+    </main>
+    
+	<script src="app.js"></script>
+  </body>
+</html>
